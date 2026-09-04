@@ -20,14 +20,16 @@ code/
         RecursiveBinarySearch.java   # binary search over int[], recursive
         SortedArray.java             # the always-sorted list: add, indexOf, remove
         Student.java                 # a sample element type: equals, hashCode, Comparable
-        Main.java                    # a small demo
+        DemoBinarySearch.java        # a small demo of both binary search classes
+        DemoSortedArray.java         # a small demo of SortedArray
   scripts/
-    run.sh                  # compile everything and run the Main demo
+    run.sh                  # compile everything and run both demos
 ```
 
 ## How to compile and run
 
-- `scripts/run.sh` — compiles all source into `out/` and runs the `Main` demo.
+- `scripts/run.sh` — compiles all source into `out/` and runs `DemoBinarySearch`
+  followed by `DemoSortedArray`.
 
 There is no build tool and no test suite: testing is introduced later in the
 course. The script above is all you need.
@@ -46,6 +48,7 @@ course. The script above is all you need.
 - `sorted.Student` — a sample element type, carried forward from Chapter 2:
   value equality by `id` (`equals`/`hashCode`) and a natural order by `id`
   (`Comparable<Student>`).
-- `sorted.Main` — a runnable demo: binary search over a sorted array, a
-  `SortedArray<Student>` roster kept in id order, and the `SortedArray<Integer>`
-  `remove` overload trap.
+- `sorted.DemoBinarySearch` — a runnable demo of `IterativeBinarySearch` and
+  `RecursiveBinarySearch` over a sorted array.
+- `sorted.DemoSortedArray` — a runnable demo: a `SortedArray<Student>` roster
+  kept in id order, and the `SortedArray<Integer>` `remove` overload trap.
