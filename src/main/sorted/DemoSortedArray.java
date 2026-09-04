@@ -1,26 +1,15 @@
 package sorted;
 
-import java.util.Arrays;
+/** A runnable demo of SortedArray. */
+public final class DemoSortedArray {
 
-/** A runnable demo: binary search over a sorted array, and the self-sorting SortedArray. */
-public final class Main {
-
-  private Main() {}
+  private DemoSortedArray() {}
 
   public static void main(String[] args) {
-    // Part 1: binary search over a sorted array.
-    int[] nums = {1, 4, 7, 9, 12};
-    System.out.println("nums: " + Arrays.toString(nums));
-    System.out.println("IterativeBinarySearch.binarySearch(7) = " + IterativeBinarySearch.binarySearch(nums, 7));
-    System.out.println("IterativeBinarySearch.binarySearch(5) = " + IterativeBinarySearch.binarySearch(nums, 5));
-    System.out.println("RecursiveBinarySearch.binarySearch(5) = " + RecursiveBinarySearch.binarySearch(nums, 5));
-
-    // Part 2: a SortedArray keeps a roster in id order no matter the add order.
     SortedArray<Student> roster = new SortedArray<>();
     roster.add(new Student(3, "Ada", 3.9));
     roster.add(new Student(1, "Linus", 3.4));
     roster.add(new Student(2, "Grace", 4.0));
-    System.out.println();
     System.out.println("roster (added 3, 1, 2 — stored in id order):");
     printEach(roster);
 
@@ -32,7 +21,6 @@ public final class Main {
     System.out.println("after remove(#1):");
     printEach(roster);
 
-    // Part 3: the remove overload trap from Chapter 2.
     SortedArray<Integer> scores = new SortedArray<>();
     scores.add(70);
     scores.add(50);
