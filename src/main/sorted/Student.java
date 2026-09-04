@@ -1,6 +1,6 @@
 package sorted;
 
-/** A student record (from Chapter 2). equals and compareTo are both by id, so they stay consistent. */
+/** A student record. */
 public class Student implements Comparable<Student> {
   private int id;
   private String name;

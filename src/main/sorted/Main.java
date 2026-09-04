@@ -1,22 +1,19 @@
 package sorted;
 
-/** A runnable demo: binary search over a DynamicArray, and the self-sorting SortedArray. */
+import java.util.Arrays;
+
+/** A runnable demo: binary search over a sorted array, and the self-sorting SortedArray. */
 public final class Main {
 
   private Main() {}
 
   public static void main(String[] args) {
-    // Part 1: binary search over a sorted DynamicArray.
-    DynamicArray<Integer> nums = new DynamicArray<>();
-    int[] values = {1, 4, 7, 9, 12};
-    for (int v : values) {
-      nums.add(v);
-    }
-    System.out.println("nums: " + toString(nums));
+    // Part 1: binary search over a sorted array.
+    int[] nums = {1, 4, 7, 9, 12};
+    System.out.println("nums: " + Arrays.toString(nums));
     System.out.println("binarySearch(7)          = " + BinarySearch.binarySearch(nums, 7));
     System.out.println("binarySearch(5)          = " + BinarySearch.binarySearch(nums, 5));
     System.out.println("binarySearchRecursive(5) = " + BinarySearch.binarySearchRecursive(nums, 5));
-    System.out.println("insertionPoint(5)        = " + BinarySearch.insertionPoint(nums, 5));
 
     // Part 2: a SortedArray keeps a roster in id order no matter the add order.
     SortedArray<Student> roster = new SortedArray<>();
@@ -54,21 +51,7 @@ public final class Main {
     }
   }
 
-  // Builds "[a, b, c]" for a DynamicArray.
-  private static <T> String toString(DynamicArray<T> a) {
-    StringBuilder str = new StringBuilder();
-    str.append("[");
-    for (int i = 0; i < a.size(); i++) {
-      str.append(a.get(i));
-      if (i < a.size() - 1) {
-        str.append(", ");
-      }
-    }
-    str.append("]");
-    return str.toString();
-  }
-
-  // Same, for a SortedArray.
+  // Builds "[a, b, c]" for a SortedArray.
   private static <T extends Comparable<T>> String toString(SortedArray<T> a) {
     StringBuilder str = new StringBuilder();
     str.append("[");

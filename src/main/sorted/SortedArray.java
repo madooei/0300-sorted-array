@@ -7,7 +7,7 @@ public class SortedArray<T extends Comparable<T>> {
   private int size;
 
   // Comparable[] (not Object[]) because T is bounded by Comparable; can't make an array of a type parameter.
-  @SuppressWarnings({"unchecked", "rawtypes"})
+  @SuppressWarnings("unchecked")
   public SortedArray() {
     arr = (T[]) new Comparable[10];
     size = 0;
@@ -92,8 +92,8 @@ public class SortedArray<T extends Comparable<T>> {
   }
 
   // Doubles the capacity. Same cast rationale as the constructor.
+  @SuppressWarnings("unchecked")
   private void grow() {
-    @SuppressWarnings({"unchecked", "rawtypes"})
     T[] bigger = (T[]) new Comparable[arr.length * 2];
     for (int i = 0; i < size; i++) {
       bigger[i] = arr[i];
