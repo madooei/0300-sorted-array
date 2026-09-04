@@ -16,10 +16,11 @@ code/
   src/
     main/
       sorted/
-        BinarySearch.java   # iterative and recursive binary search over int[]
-        SortedArray.java    # the always-sorted list: add, indexOf, remove
-        Student.java        # a sample element type: equals, hashCode, Comparable
-        Main.java           # a small demo
+        IterativeBinarySearch.java   # binary search over int[], iterative
+        RecursiveBinarySearch.java   # binary search over int[], recursive
+        SortedArray.java             # the always-sorted list: add, indexOf, remove
+        Student.java                 # a sample element type: equals, hashCode, Comparable
+        Main.java                    # a small demo
   scripts/
     run.sh                  # compile everything and run the Main demo
 ```
@@ -33,10 +34,11 @@ course. The script above is all you need.
 
 ## What's here
 
-- `sorted.BinarySearch` — a namespace of static searches over a sorted
-  `int[]`: `binarySearch` (iterative, returns the index or `-1`) and
-  `binarySearchRecursive` (the same algorithm written recursively, with a
-  private `low`/`high` helper). Correct only on sorted input.
+- `sorted.IterativeBinarySearch` — `binarySearch(int[] arr, int target)`,
+  returns the index of `target` or `-1`. Correct only on sorted input.
+- `sorted.RecursiveBinarySearch` — the same search written recursively:
+  a public `binarySearch(int[] arr, int target)` returning `boolean`, backed
+  by a private `low`/`high` overload. Correct only on sorted input.
 - `sorted.SortedArray<T extends Comparable<T>>` — a list that maintains the
   sorted-order invariant. `add` finds the insertion point with binary search and
   shifts larger elements right; `indexOf`/`contains` reuse that one search;

@@ -11,9 +11,9 @@ public final class Main {
     // Part 1: binary search over a sorted array.
     int[] nums = {1, 4, 7, 9, 12};
     System.out.println("nums: " + Arrays.toString(nums));
-    System.out.println("binarySearch(7)          = " + BinarySearch.binarySearch(nums, 7));
-    System.out.println("binarySearch(5)          = " + BinarySearch.binarySearch(nums, 5));
-    System.out.println("binarySearchRecursive(5) = " + BinarySearch.binarySearchRecursive(nums, 5));
+    System.out.println("IterativeBinarySearch.binarySearch(7) = " + IterativeBinarySearch.binarySearch(nums, 7));
+    System.out.println("IterativeBinarySearch.binarySearch(5) = " + IterativeBinarySearch.binarySearch(nums, 5));
+    System.out.println("RecursiveBinarySearch.binarySearch(5) = " + RecursiveBinarySearch.binarySearch(nums, 5));
 
     // Part 2: a SortedArray keeps a roster in id order no matter the add order.
     SortedArray<Student> roster = new SortedArray<>();
