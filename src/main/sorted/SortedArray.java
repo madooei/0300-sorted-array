@@ -9,8 +9,8 @@ public class SortedArray<T extends Comparable<T>> {
   // Comparable[] (not Object[]) because T is bounded by Comparable; can't make an array of a type parameter.
   @SuppressWarnings({"unchecked", "rawtypes"})
   public SortedArray() {
-    arr = (T[]) new Comparable[10];
-    size = 0;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   public T get(int index) {
@@ -25,23 +25,13 @@ public class SortedArray<T extends Comparable<T>> {
   }
 
   public void add(T value) {
-    if (size == arr.length) {
-      grow();
-    }
-    int i = insertionPoint(value);
-    for (int j = size; j > i; j--) {
-      arr[j] = arr[j - 1];   // shift larger elements right to open a gap
-    }
-    arr[i] = value;
-    size++;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   public int indexOf(T value) {
-    int i = insertionPoint(value);
-    if (i < size && arr[i].equals(value)) {
-      return i;
-    }
-    return -1;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   public boolean contains(T value) {
@@ -50,45 +40,21 @@ public class SortedArray<T extends Comparable<T>> {
 
   // Removes the element at a given index; returns what was removed.
   public T remove(int index) {
-    if (index < 0 || index >= size) {
-      throw new IndexOutOfBoundsException();
-    }
-    T removed = arr[index];
-    for (int j = index; j < size - 1; j++) {
-      arr[j] = arr[j + 1];   // shift left to close the gap
-    }
-    size--;
-    arr[size] = null;
-    return removed;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Removes the first occurrence of value.
   // Returns false if value is not found.
   public boolean remove(T value) {
-    int i = indexOf(value);
-    if (i == -1) {
-      return false;
-    }
-    remove(i);
-    return true;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Index where value sits, or where it would belong if absent (binary search).
   private int insertionPoint(T value) {
-    int low = 0;
-    int high = size - 1;
-    while (low <= high) {
-      int mid = low + (high - low) / 2;
-      int cmp = arr[mid].compareTo(value);
-      if (cmp == 0) {
-        return mid;
-      } else if (cmp < 0) {
-        low = mid + 1;
-      } else {
-        high = mid - 1;
-      }
-    }
-    return low;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Doubles the capacity. Same cast rationale as the constructor.
