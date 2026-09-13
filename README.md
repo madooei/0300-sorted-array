@@ -1,7 +1,6 @@
 # The Sorted Array
 
-A list that always keeps its elements in sorted order, and the binary search
-that order unlocks.
+A list that always keeps its elements in sorted order, and the binary search that order unlocks.
 
 ## Prerequisites
 
@@ -28,27 +27,15 @@ code/
 
 ## How to compile and run
 
-- `scripts/run.sh` — compiles all source into `out/` and runs `DemoBinarySearch`
-  followed by `DemoSortedArray`.
+- `scripts/run.sh` — compiles all source into `out/` and runs `DemoBinarySearch` followed by `DemoSortedArray`.
 
-There is no build tool and no test suite: testing is introduced later in the
-course. The script above is all you need.
+There is no build tool and no test suite: testing is introduced later in the course. The script above is all you need.
 
 ## What's here
 
-- `sorted.IterativeBinarySearch` — `binarySearch(int[] arr, int target)`,
-  returns the index of `target` or `-1`. Correct only on sorted input.
-- `sorted.RecursiveBinarySearch` — the same search written recursively:
-  a public `binarySearch(int[] arr, int target)` returning `boolean`, backed
-  by a private `low`/`high` overload. Correct only on sorted input.
-- `sorted.SortedArray<T extends Comparable<T>>` — a list that maintains the
-  sorted-order invariant. `add` finds the insertion point with binary search and
-  shifts larger elements right; `indexOf`/`contains` reuse that one search;
-  `remove` closes the gap. There is deliberately no `set`.
-- `sorted.Student` — a sample element type, carried forward from Chapter 2:
-  value equality by `id` (`equals`/`hashCode`) and a natural order by `id`
-  (`Comparable<Student>`).
-- `sorted.DemoBinarySearch` — a runnable demo of `IterativeBinarySearch` and
-  `RecursiveBinarySearch` over a sorted array.
-- `sorted.DemoSortedArray` — a runnable demo: a `SortedArray<Student>` roster
-  kept in id order, and the `SortedArray<Integer>` `remove` overload trap.
+- `sorted.IterativeBinarySearch` — `binarySearch(int[] arr, int target)`, returns the index of `target` or `-1`. Correct only on sorted input.
+- `sorted.RecursiveBinarySearch` — the same search written recursively: a public `binarySearch(int[] arr, int target)` returning `boolean`, backed by a private `low`/`high` overload. Correct only on sorted input.
+- `sorted.SortedArray<T extends Comparable<T>>` — a list that maintains the sorted-order invariant. `add` finds the insertion point with binary search and shifts larger elements right; `indexOf`/`contains` reuse that one search; `remove` closes the gap. There is deliberately no `set`.
+- `sorted.Student` — a sample element type, carried forward from Chapter 2: value equality by `id` (`equals`/`hashCode`) and a natural order by `id` (`Comparable<Student>`).
+- `sorted.DemoBinarySearch` — a runnable demo of `IterativeBinarySearch` and `RecursiveBinarySearch` over a sorted array.
+- `sorted.DemoSortedArray` — a runnable demo: a `SortedArray<Student>` roster kept in id order, and the `SortedArray<Integer>` `remove` overload trap.
