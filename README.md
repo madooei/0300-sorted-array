@@ -33,7 +33,7 @@ code/
 
 There is no build tool and no test suite: testing is introduced later in the course. The script above is all you need.
 
-## What's here
+## Contents
 
 - `sorted.IterativeBinarySearch` — `binarySearch(int[] arr, int target)`, returns the index of `target` or `-1`. Correct only on sorted input.
 - `sorted.RecursiveBinarySearch` — the same search written recursively: a public `binarySearch(int[] arr, int target)` returning `boolean`, backed by a private `low`/`high` overload. Correct only on sorted input.
