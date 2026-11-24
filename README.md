@@ -19,15 +19,17 @@ code/
         RecursiveBinarySearch.java   # binary search over int[], recursive
         SortedArray.java             # the always-sorted list: add, indexOf, remove
         Student.java                 # a sample element type: equals, hashCode, Comparable
-        DemoBinarySearch.java        # a small demo of both binary search classes
-        DemoSortedArray.java         # a small demo of SortedArray
+      demo/                          # one demo per class you implement
+        IterativeBinarySearchDemo.java
+        RecursiveBinarySearchDemo.java
+        SortedArrayDemo.java
   scripts/
-    run.sh                  # compile everything and run both demos
+    run.sh                           # compile everything and run one demo
 ```
 
 ## How to compile and run
 
-- `scripts/run.sh` — compiles all source into `out/` and runs `DemoBinarySearch` followed by `DemoSortedArray`.
+- `scripts/run.sh demo.SortedArrayDemo` — compiles all source into `out/` and runs that one demo. Every class you implement has its own demo.
 
 There is no build tool and no test suite: testing is introduced later in the course. The script above is all you need.
 
@@ -37,5 +39,4 @@ There is no build tool and no test suite: testing is introduced later in the cou
 - `sorted.RecursiveBinarySearch` — the same search written recursively: a public `binarySearch(int[] arr, int target)` returning `boolean`, backed by a private `low`/`high` overload. Correct only on sorted input.
 - `sorted.SortedArray<T extends Comparable<T>>` — a list that maintains the sorted-order invariant. `add` finds the insertion point with binary search and shifts larger elements right; `indexOf`/`contains` reuse that one search; `remove` closes the gap. There is deliberately no `set`.
 - `sorted.Student` — a sample element type, carried forward from Chapter 2: value equality by `id` (`equals`/`hashCode`) and a natural order by `id` (`Comparable<Student>`).
-- `sorted.DemoBinarySearch` — a runnable demo of `IterativeBinarySearch` and `RecursiveBinarySearch` over a sorted array.
-- `sorted.DemoSortedArray` — a runnable demo: a `SortedArray<Student>` roster kept in id order, and the `SortedArray<Integer>` `remove` overload trap.
+- `demo.IterativeBinarySearchDemo`, `demo.RecursiveBinarySearchDemo`, and `demo.SortedArrayDemo` — one demo per class. The two search demos run on the sorted array from the notes, and the `SortedArray` demo keeps a `SortedArray<Student>` roster in id order and shows the `SortedArray<Integer>` `remove` overload trap.
